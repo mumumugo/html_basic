@@ -1,0 +1,40 @@
+/*  (*) universial selector / select all tags */
+* {
+  color: green;
+}
+
+/*type selector / tag에 가까울수록 우선순위가 먼저*/
+li {
+  color: blue;
+}
+
+/* id selector / input_username is a id here*/
+#input_username {
+  color: orange;
+}
+/*class selector / container / if the div is empty box then the color is not showing. 
+padding은 컨텐츠 안에 들어가는 spacing(노란 상자 커짐), margin은 컨텐츠 밖에 들어가는
+*/
+.red_for_css {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  background-color: yellow;
+}
+
+.blue_for_css {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-color: blue;
+}
+/*hover means when the mouse on the botton*/
+button:hover {
+  color: red;
+  background-color: black;
+}
+
+/*.com으로 끝나는 ref들만 purple로 설정*/
+a[href$=".com"] {
+  color: purple;
+}
