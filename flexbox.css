@@ -1,0 +1,83 @@
+/*Flex box에는 container에 들어가는 속성 값과 각각 item에 들어가는 속성값으로 나뉘어져 있다.
+
+container의 속성값을 먼저 알아보자 
+*/
+.container {
+  background: beige;
+  /*view hight = 부모와 상관없이 item을 보이는 view port의 100%를 쓰겠다*/
+  height: 100vh;
+  display: flex;
+  /*중심축: row or row-reverse or column or column-reverse*/
+  flex-direction: row;
+
+  /*nowrap = item이 화면크기에 맞지 않을때 item크기를 화면에 맞춘다*/
+  /*wrap = item이 화면크기에 맞지 않을때 item이 자동으로 다음 라인으로 간다*/
+  /*wrap-reverse = + 거꾸로*/
+  flex-wrap: wrap;
+
+  /*flex-flow: column nowrap; (flex-direction,wrap 한번에 쓸수 있는.*/
+
+  /*중심축에서 아이템을 어떻게 화면에 배치하는지 
+    flex-start(left to right), flex-end(right to left), center, space-around, space-between, space-evenly*/
+  justify-content: space-evenly;
+
+  /*반대축에서 아이템을 배치
+  baseline- item 사이즈가 다르면 baseline에 맞춰서 라인을 맞춤*/
+  align-items: center;
+
+  /* 반대축의 아이템을 지정*/
+  align-content: space-between;
+}
+
+.item {
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.item1 {
+  background: #ffcdd2;
+  flex-grow: 1;
+}
+.item2 {
+  background: #f48fb1;
+  /*크기를 키워 화면에 사이즈를 맞춤*/
+  flex-grow: 1;
+
+  /*화면이 작아졌을때 크기를 늘어나고 줄어들게 조절*/
+  flex-shrink: 0;
+
+  /*flex-grow, flex-shrink 없이도 item의 비율을 percentage로 맞춤*/
+  flex-basis: 30%;
+
+  /*grow, shrink, basis*/
+  flex: 2 2 auto;
+
+  /*item 별로 정렬 가능, container에서 벗어나는게 가능. */
+  align-self: center;
+}
+.item3 {
+  background: #ce93d8;
+  flex-grow: 1;
+}
+.item4 {
+  background: #9fa8da;
+}
+.item5 {
+  background: #90caf9;
+}
+.item6 {
+  background: #80deea;
+}
+.item7 {
+  background: #a5d6a7;
+}
+.item8 {
+  background: #e6ee9c;
+}
+.item9 {
+  background: #ffe082;
+}
+.item10 {
+  background: #ffab91;
+}
